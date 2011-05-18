@@ -2,6 +2,7 @@
 <head>
 <meta http-equiv="refresh" content="2; http://pstatus.remanber.com/results.php" />
 <title>Vote Submitted</title>
+<link href="includes/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>

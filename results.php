@@ -4,6 +4,7 @@
 
 <head>
 <title>PStatus results</title>
+<link href="includes/style.css" rel="stylesheet" type="style/css" />
 </head>
 
 <body>

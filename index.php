@@ -8,6 +8,7 @@ include('includes/config.php');
 
 <head>
 <title>PStatus voting</title>
+<link href="includes/style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
