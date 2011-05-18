@@ -11,9 +11,9 @@
 include('includes/config.php');
 
 $vote_time = time();
-$vote_session = ($vote_time);
+$vote_session = vote_session($vote_time);
 
-if ($vote_session < 5) {  // Check to see if there is a current valid voting session
+if ($vote_session < 6) {  // Check to see if there is a current valid voting session
 	
 	$vote_value = mysql_real_escape_string($_POST['vote_value']);
 
