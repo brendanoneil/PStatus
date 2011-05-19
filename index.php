@@ -1,9 +1,4 @@
-<?php
-
-include('includes/config.php');
-
-?>
-
+<?php include('includes/config.php'); ?>
 <html>
 
 <head>
@@ -12,16 +7,15 @@ include('includes/config.php');
 </head>
 
 <body>
-
-<h1>PStatus Voting</h1>
+<h2>So How's The</h2><br />
+<h1>P Status</h1><br />
+<h2>This Session?</h2>
 
 <form action="submit_vote.php" method=POST>
-<p>
-<input type="radio" name="vote_value" value="4" />A
-<input type="radio" name="vote_value" value="3" />B
-<input type="radio" name="vote_value" value="2" />C
-<input type="radio" name="vote_value" value="1" />F
-</p>
+<div class="A">A<br /><input type="radio" name="vote_value" value="4" /></div><br />
+<div class="B">B<br /><input type="radio" name="vote_value" value="3" /></div><br />
+<div class="C">C<br /><input type="radio" name="vote_value" value="2" /></div><br />
+<div class="F">F<br /><input type="radio" name="vote_value" value="1" /></div><br />
 <p>
 <input type="submit" value="vote">
 </p>

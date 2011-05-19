@@ -17,7 +17,7 @@ $query = "SELECT vote_session, AVG(vote_value) AS vote_value FROM votes GROUP BY
 $sql = mysql_query($query) or die(mysql_error());
 
 while($results = mysql_fetch_array($sql)) {
-	echo '<p>Session '. $results['vote_session']. '\'s average is: ' . grade(round($results['vote_value'])) . '</p>';
+	echo '<p>Session '. $results['vote_session']. '\'s average is: <div class="' . grade(round($results['vote_value'])) . '">'. grade(round($results['vote_value'])).'</div></p>';
 }
 
 $result = grade(round($average[vote_session(time())])); 
