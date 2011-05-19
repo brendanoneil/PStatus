@@ -1,8 +1,14 @@
 <?php 
+// Checks if last vote was cast in the last 30 seconds
+
 if (!isset($_COOKIE['lastVote'])) {
-	setcookie('lastVote', time()+3600*3);
-	$first_try = true;
-} ?>
+	setcookie('lastVote', time()+30, time()+30);
+	$valid_vote = true;
+} else {
+	$valid_vote = false;
+}
+
+?>
 <html>
 <head>
 <meta http-equiv="refresh" content="2; http://pstatus.remanber.com/results.php" />
@@ -16,24 +22,24 @@ if (!isset($_COOKIE['lastVote'])) {
 <?php
 include('includes/config.php');
 
-$vote_session = vote_session(time());
+$vote_session = vote_session(time()); // Finds which session the school is in with vote_session()
 
-if (isset($_COOKIE['lastVote'])) {
-	$last_vote = $_COOKIE['lastVote'];
-}
+if ( ($vote_session < 6) && ($valid_vote) ) {  // Check to see if there is a current valid voting session
 
-if ( ($vote_session < 6) && ($first_try) ) {  // Check to see if there is a current valid voting session
-	
 	if (isset($_POST['vote_value'])) {
-		$vote_value = mysql_real_escape_string($_POST['vote_value']);
+
+		$vote_value = mysql_real_escape_string($_POST['vote_value']); // FFFUUUU SQL INJECTION
+
 	} else if (isset($_GET['vote_value'])) {
-		$vote_value = mysql_real_escape_string($_GET['vote_value'];
+
+		$vote_value = mysql_real_escape_string($_GET['vote_value']);  // FFUUUUU SQL INJECTION
+
 	}
 
+	// Submit Query
 	mysql_query("INSERT INTO votes (vote_value, vote_date, vote_time, vote_ip, vote_session) VALUES ( '$vote_value', CURRENT_DATE, CURRENT_TIME, '$user_ip', '$vote_session')") or die (mysql_error()); echo "Vote cast. </h1>";
 
-
-} else if ($vote_time < $last_vote) {
+} else if (!$valid_vote) {
 
 	echo '</h1><p>You\'ve voted too recently! Please wait!</p>';
 
