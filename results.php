@@ -9,7 +9,7 @@
 
 <body>
 
-<h1>PStatus results</h1>
+<h1>The P Status GPA</h1>
 
 <?php
 $query = "SELECT vote_session, AVG(vote_value) AS vote_value FROM votes GROUP BY vote_session";
