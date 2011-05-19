@@ -24,7 +24,11 @@ if (isset($_COOKIE['lastVote'])) {
 
 if ( ($vote_session < 6) && ($first_try) ) {  // Check to see if there is a current valid voting session
 	
-	$vote_value = mysql_real_escape_string($_POST['vote_value']);
+	if (isset($_POST['vote_value'])) {
+		$vote_value = mysql_real_escape_string($_POST['vote_value']);
+	} else if (isset($_GET['vote_value'])) {
+		$vote_value = mysql_real_escape_string($_GET['vote_value'];
+	}
 
 	mysql_query("INSERT INTO votes (vote_value, vote_date, vote_time, vote_ip, vote_session) VALUES ( '$vote_value', CURRENT_DATE, CURRENT_TIME, '$user_ip', '$vote_session')") or die (mysql_error()); echo "Vote cast. </h1>";
 
