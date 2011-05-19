@@ -11,15 +11,10 @@
 <h1>P Status</h1><br />
 <h2>This Session?</h2>
 
-<form action="submit_vote.php" method=POST>
-<div class="A">A<br /><input type="radio" name="vote_value" value="4" /></div><br />
-<div class="B">B<br /><input type="radio" name="vote_value" value="3" /></div><br />
-<div class="C">C<br /><input type="radio" name="vote_value" value="2" /></div><br />
-<div class="F">F<br /><input type="radio" name="vote_value" value="1" /></div><br />
-<p>
-<input type="submit" value="vote">
-</p>
-</form>
+<div class="A" onclick="location.href='submit_vote.php?vote_value=A';" style="cursor:pointer">A</div><br />
+<div class="B" onclick="location.href='submit_vote.php?vote_value=B';" style="cursor:pointer">B</div><br />
+<div class="C" onclick="location.href='submit_vote.php?vote_value=C';" style="cursor:pointer">C</div><br />
+<div class="F" onclick="location.href='submit_vote.php?vote_value=F';" style="cursor:pointer">F</div><br />
 
 </body>
 </html>
