@@ -19,6 +19,17 @@ h2 {
 	padding:0;
 }
 
+.session {
+	width:400px;
+	height:70px;
+	line-height:70px;
+	text-align:center;
+	color:white;
+	background-color:#4d4d4d;
+	margin:10px auto;
+	font-size:4em;
+	font-weight:bold;
+}
 .A {
 	margin: 0 auto;
 	width:200px;
