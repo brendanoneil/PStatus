@@ -7,9 +7,9 @@
 </head>
 
 <body>
-<h2>So How's The</h2><br />
+<h2>Hey RC's, how's the</h2><br />
 <h1>P Status</h1><br />
-<h2>This Session?</h2>
+<h2>this session?</h2>
 
 <div class="A" onclick="location.href='submit_vote.php?vote_value=A';" style="cursor:pointer">A</div><br />
 <div class="B" onclick="location.href='submit_vote.php?vote_value=B';" style="cursor:pointer">B</div><br />
