@@ -35,7 +35,7 @@ h2 {
 	width:200px;
 	height:150px;
 	color:white;
-	background-color:red;
+	background-color: rgb (204,4,4);
 	line-height:150px;
 	font-weight:bold;
 	font-size:10em;
@@ -45,7 +45,7 @@ h2 {
 	width:200px;
 	height:150px;
 	color:white;
-	background-color:orange;
+	background-color: rgb(255,108,10);
 	line-height:150px;
 	font-weight:bold;
 	font-size:10em;
@@ -55,7 +55,7 @@ h2 {
 	width:200px;
 	height:150px;
 	color:white;
-	background-color:yellow;
+	background-color: rgb(235,187,14);
 	line-height:150px;
 	font-weight:bold;
 	font-size:10em;
